@@ -11,46 +11,50 @@ class Program
       long inicio = 200;
       long fim = 800000;
       bool longo = true;
+      const string T_NORMAL  = "Normal  ";
+      const string T_THREAD  = "Thread  ";
+      const string T_PARALEL = "Paralel ";
 
       Console.WriteLine($"Começando com a forma mais demorada faixa: {inicio} /  {fim}");
       var sw = new Stopwatch();
       sw.Start();
       var result = ContarPrimos(inicio, fim, longo);
       sw.Stop();
-      Console.WriteLine($"Dev Junior     ->  Resultado: {result} numeros primos encontrados em {sw.ElapsedMilliseconds/1000} segundos, ({Environment.ProcessorCount} processadores)");
+      Console.WriteLine($"{T_NORMAL} ->  Resultado: {result} numeros primos encontrados em {sw.ElapsedMilliseconds/1000} segundos, ({Environment.ProcessorCount} processadores)");
 
       var swD = new Stopwatch();
       swD.Start();
       var resultD = ContarPrimosThreads(inicio, fim, longo);
       swD.Stop();
-      Console.WriteLine($"Dev Dinossauro ->  Resultado: {resultD} numeros primos encontrados em {swD.ElapsedMilliseconds/1000} segundos, ({Environment.ProcessorCount} processadores)");      
+      Console.WriteLine($"{T_THREAD} ->  Resultado: {resultD} numeros primos encontrados em {swD.ElapsedMilliseconds/1000} segundos, ({Environment.ProcessorCount} processadores)");      
 
       var swP = new Stopwatch();
       swP.Start();
       var resultP = ContarPrimosParalel(inicio, fim, longo);
       swP.Stop();
-      Console.WriteLine($"Dev Atualizado ->  Resultado: {resultP} numeros primos encontrados em {swP.ElapsedMilliseconds/1000} segundos, ({Environment.ProcessorCount} processadores)");
+      Console.WriteLine($"{T_PARALEL} ->  Resultado: {resultP} numeros primos encontrados em {swP.ElapsedMilliseconds/1000} segundos, ({Environment.ProcessorCount} processadores)");
 
+      //**************************************************************************************************
       Console.WriteLine($"Melhor forma faixa: {inicio} /  {fim}");
-
+            
       longo = false;
       var sw2 = new Stopwatch();
       sw2.Start();
       var result2 = ContarPrimos(inicio, fim, longo);
       sw2.Stop();
-      Console.WriteLine($"Dev Junior     ->  Resultado: {result2} numeros primos encontrados em {sw2.ElapsedMilliseconds / 1000} segundos, ({Environment.ProcessorCount} processadores)");
+      Console.WriteLine($"{T_NORMAL} ->  Resultado: {result2} numeros primos encontrados em {sw2.ElapsedMilliseconds / 1000} segundos, ({Environment.ProcessorCount} processadores)");
 
       var swD2 = new Stopwatch();
       swD2.Start();
       var resultD2 = ContarPrimosThreads(inicio, fim, longo);
       swD2.Stop();
-      Console.WriteLine($"Dev Dinossauro ->  Resultado: {resultD2} numeros primos encontrados em {swD2.ElapsedMilliseconds / 1000} segundos, ({Environment.ProcessorCount} processadores)");
+      Console.WriteLine($"{T_THREAD} ->  Resultado: {resultD2} numeros primos encontrados em {swD2.ElapsedMilliseconds / 1000} segundos, ({Environment.ProcessorCount} processadores)");
 
       var swP2 = new Stopwatch();
       swP2.Start();
       var resultP2 = ContarPrimosParalel(inicio, fim, longo);
       swP2.Stop();
-      Console.WriteLine($"Dev Atualizado ->  Resultado: {resultP2} numeros primos encontrados em {swP2.ElapsedMilliseconds / 1000} segundos, ({Environment.ProcessorCount} processadores)");
+      Console.WriteLine($"{T_PARALEL} ->  Resultado: {resultP2} numeros primos encontrados em {swP2.ElapsedMilliseconds / 1000} segundos, ({Environment.ProcessorCount} processadores)");
    }
 
    static long ContarPrimos(long inicio, long fin, bool longo = false)

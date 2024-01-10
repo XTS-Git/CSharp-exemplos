@@ -1,5 +1,4 @@
 ﻿
-
 namespace CandidateTesting.RicardoCosta.Interfaces
 {
    public interface ILogDownloader

@@ -2,18 +2,15 @@
 using CandidateTesting.RicardoCosta.Interfaces;
 using CandidateTesting.RicardoCosta.Services;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using static System.Net.WebRequestMethods;
 
 namespace CandidateTesting.RicardoCosta.ConsoleApp
 {
    public class Program
    {
-      //var url = https://s3.amazonaws.com/uux-itaas-static/minha-cdn-logs/input-01.txt
       const string PROVIDER = "MINHA CDN";
+      private static ServiceProvider serviceProvider = ConfigureServices();
       public static async Task Main(string[] args)
       {
-
          if (!Validation.IsValidParameters(args))
             return;
 
@@ -31,18 +28,30 @@ namespace CandidateTesting.RicardoCosta.ConsoleApp
             return;
          }
 
-
-         var serviceProvider = ConfigureServices();
          var logRecord = serviceProvider.GetRequiredService<LogRecord>();
 
          var result = await logRecord.RunAsync(PROVIDER, url);
          try
          {
             string folder = Path.GetDirectoryName(output);
+            string fileName = Path.GetFileName(output);
 
-            Directory.CreateDirectory(folder);
+            if (folder == "") {
+               Console.WriteLine("Enter a folder to store the log ");
+               return;
+            }
+            if (fileName == "")
+            {
+               Console.WriteLine("Enter a file name to store the log ");
+               return;
+            }
+            try
+            {
+               Directory.CreateDirectory(folder);
+            }
+            catch (IOException) {  }
 
-            System.IO.File.WriteAllText(output, result);
+            await System.IO.File.WriteAllTextAsync(output, result);
 
             Console.WriteLine(result);
             Console.WriteLine("Press Enter to exit...");

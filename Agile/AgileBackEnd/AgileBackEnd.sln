@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgileBackEnd", "AgileBackEnd.csproj", "{B19F622D-F67B-4862-90B7-CDE1A598A17D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogTests", "..\LogTests\LogTests.csproj", "{F191648C-E8F4-4238-9E05-79DEB6620326}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B19F622D-F67B-4862-90B7-CDE1A598A17D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B19F622D-F67B-4862-90B7-CDE1A598A17D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B19F622D-F67B-4862-90B7-CDE1A598A17D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B19F622D-F67B-4862-90B7-CDE1A598A17D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F191648C-E8F4-4238-9E05-79DEB6620326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F191648C-E8F4-4238-9E05-79DEB6620326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F191648C-E8F4-4238-9E05-79DEB6620326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F191648C-E8F4-4238-9E05-79DEB6620326}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {266D0458-A796-4113-9F6D-0689A7D31034}
+	EndGlobalSection
+EndGlobal

@@ -21,5 +21,11 @@ namespace Testes
    public class  SegundoPullRequest
    {
          public SegundoPullRequest() { }
-      }
+   }
+
+
+   public class  TerceiroPullRequest
+   {
+         public TerceiroPullRequest() { }
+   }
 }

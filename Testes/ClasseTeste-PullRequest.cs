@@ -17,4 +17,9 @@ namespace Testes
     {
       public PrimeiroPullRequest() { }
     }
+
+   public class  SegundoPullRequest
+   {
+         public SegundoPullRequest() { }
+      }
 }

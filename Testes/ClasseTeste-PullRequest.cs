@@ -28,9 +28,4 @@ namespace Testes
    {
          public TerceiroPullRequest() { }
    }
-
-   public class  QuartoPullRequestDepoisDoMerge
-   {
-         public QuartoPullRequestDepoisDoMerge() { }
-   }
 }

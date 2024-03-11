@@ -33,4 +33,9 @@ namespace Testes
    {
          public QuartoPullRequestDepoisDoMerge() { }
    }
+
+   public class  QuintoPullRequestDepoisDoMergeDeVerdade
+   {
+         public QuintoPullRequestDepoisDoMergeDeVerdade() { }
+   }
 }

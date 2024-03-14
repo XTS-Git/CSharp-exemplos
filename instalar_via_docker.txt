@@ -1,0 +1,7 @@
+abre o docker hub
+busque por: jamj2000/oracle-xe-21c
+baixe o container
+abre um terminal e digite:
+docker run -d --name oracle-xe-21c -p 1521:1521 -p 5500:5500 -p 8080:8080 -e ORACLE_PWD=mypassword -e ORACLE_CHARACTERSET=AL32UTF8 -v /opt/oracle/oradata jamj2000/oracle-xe-21c
+
+espere acabar de subir o oracle, demora um pouco.

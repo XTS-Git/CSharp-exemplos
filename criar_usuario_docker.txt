@@ -1,0 +1,6 @@
+abra o docker desktop
+executre a imagem
+selecione a imagem, já em execução e selecione a opção na menu horizontal na parte de cima = Exec = 
+inicie o sqlplus como usuário: sys as sysdba
+digite: alter session set "_ORACLE_SCRIPT"=true;
+agora é só criar o usuário.
